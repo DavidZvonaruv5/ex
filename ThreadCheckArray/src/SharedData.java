@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * @author Lior Buzaglo
  * @version 1 Build November 2 , 2022
  *
- *
+ * 
  */
 public class SharedData 
 {

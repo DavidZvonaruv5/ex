@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**This class prints out the array, the number were trying to get to it,
+ * and under it the flags turned on(1) that implies its part of the combination
+ * and also tells which thread got to the combination 
+ * @author davidzvonaruv
+ * @version 1.1*/
 public class TestThreadCheckArray {
 	public static void main(String[] args) {
 		long startTime = System.nanoTime();

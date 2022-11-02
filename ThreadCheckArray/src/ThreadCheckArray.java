@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /**This class created to check if the integers
  *  we got from the user can be combine to a number that 
- *  the user chose */
+ *  the user chose  */
 
 public class ThreadCheckArray implements Runnable 
 {
