@@ -1,17 +1,23 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestThreadCheckArray {
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		try (Scanner input = new Scanner(System.in)) {
 			Thread thread1, thread2;
 			System.out.println("Enter array size");
 			int num  = input.nextInt();
-			int [] array = new int[num];
+			ArrayList<Integer> array = new ArrayList<Integer>();
 			System.out.println("Enter numbers for array");
 			
-			for (int index = 0; index < num; index++) 
-				array[index] = input.nextInt();
-			
+			for (int index = 0; index < num; index++)
+			{
+				int element  = input.nextInt();
+				array.add(element);
+
+			}
+		
 			System.out.println("Enter number");
 			num = input.nextInt();
 			
@@ -35,10 +41,11 @@ public class TestThreadCheckArray {
 				System.out.println("Sorry");
 				return;
 			}
-			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().length);
+			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().size());
 			System.out.print("I:    ");
-			for(int index = 0; index < sd.getArray().length ; index++)
+			for(int index = 0; index < sd.getArray().size() ; index++)
 				System.out.print(index + "    ");
+			
 			System.out.println();
 			System.out.print("A:    ");
 			for (int index : sd.getArray())
@@ -65,14 +72,10 @@ public class TestThreadCheckArray {
 				else
 					System.out.print("0    ");	
 			}
-			if(thread1.interrupted()) {
-				System.out.println();
-				System.out.println("Thread 1 wins");
-			}else {
-				System.out.println();
-				System.out.println("Thread 2 wins");
-			}
-				
+			long endTime   = System.nanoTime();
+			long totalTime = endTime - startTime;
+	        System.out.println("\nThe program took " + totalTime/1000000000+ " seconds to finish");
+
 		}
 	}
 
