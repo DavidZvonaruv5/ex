@@ -35,7 +35,6 @@ public class SharedData
 	{
 		return winArray;
 	}
-	
 	/**setting the array so we know were is the combination located at
 	 * @param winArray 			when winning array after the checking
 	 *  */
