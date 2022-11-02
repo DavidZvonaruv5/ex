@@ -65,6 +65,14 @@ public class TestThreadCheckArray {
 				else
 					System.out.print("0    ");	
 			}
+			if(thread1.interrupted()) {
+				System.out.println();
+				System.out.println("Thread 1 wins");
+			}else {
+				System.out.println();
+				System.out.println("Thread 2 wins");
+			}
+				
 		}
 	}
 
